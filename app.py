@@ -6,6 +6,7 @@ app = Flask(__name__) #__name__ les esta diciendo a Flask en donde debe encontra
 
 """Ahora con este codigo estaremos creando la primera ruta den flask, ya que esta nos dice @app.route('/') cuando el usuario ingrese a la URL raiz (http://localhost:5000/), tienes que ejecutar esta función"""
 
+@app.route('/')
 @app.route('/Inicio')
 def inicio():
     # Ahora retornamos HTML completo
