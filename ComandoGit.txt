@@ -1,0 +1,157 @@
+═══════════════════════════════════════════════════════════
+            COMANDOS GIT - GUÍA RÁPIDA
+═══════════════════════════════════════════════════════════
+
+📋 FLUJO DE TRABAJO DIARIO
+──────────────────────────────────────────────────────────
+
+1. AL EMPEZAR EL DÍA (Bajar cambios del compañero):
+   git pull
+
+2. TRABAJAR EN TU CÓDIGO...
+   (Crear/modificar archivos)
+
+3. VER QUÉ CAMBIÓ:
+   git status
+
+4. AGREGAR CAMBIOS:
+   git add .                    # Todos los archivos
+   git add archivo.py           # Un archivo específico
+
+5. GUARDAR CAMBIOS:
+   git commit -m "Descripción clara de lo que hiciste"
+
+6. SUBIR A GITHUB:
+   git push
+
+
+═══════════════════════════════════════════════════════════
+⚙️  CONFIGURACIÓN INICIAL (Solo una vez)
+═══════════════════════════════════════════════════════════
+
+git config --global user.name "Tu Nombre"
+git config --global user.email "tuemail@ejemplo.com"
+
+git init                        # Inicializar Git en carpeta
+git remote add origin URL       # Conectar con GitHub
+
+
+═══════════════════════════════════════════════════════════
+📊 CONSULTAR INFORMACIÓN
+═══════════════════════════════════════════════════════════
+
+git status                      # Ver estado actual
+git log                         # Ver historial completo
+git log --oneline              # Ver historial resumido
+git log --graph --oneline      # Ver historial gráfico
+git diff                       # Ver diferencias no guardadas
+git diff archivo.py            # Ver cambios en archivo específico
+git blame archivo.py           # Ver quién modificó cada línea
+git remote -v                  # Ver repositorios remotos
+
+
+═══════════════════════════════════════════════════════════
+🌿 TRABAJAR CON RAMAS (BRANCHES)
+═══════════════════════════════════════════════════════════
+
+git branch                     # Ver todas las ramas
+git branch nombre-rama         # Crear nueva rama
+git checkout nombre-rama       # Cambiar a otra rama
+git checkout -b nombre-rama    # Crear y cambiar a nueva rama
+git merge nombre-rama          # Fusionar rama a la actual
+git branch -d nombre-rama      # Eliminar rama
+
+
+═══════════════════════════════════════════════════════════
+↩️  DESHACER CAMBIOS
+═══════════════════════════════════════════════════════════
+
+# Descartar cambios en archivo (antes de add):
+git checkout -- archivo.py
+
+# Quitar archivo del staging (después de add):
+git reset archivo.py
+
+# Deshacer el último commit (mantener cambios):
+git reset --soft HEAD~1
+
+# Deshacer el último commit (borrar cambios):
+git reset --hard HEAD~1
+
+
+═══════════════════════════════════════════════════════════
+🗑️  ELIMINAR ARCHIVOS
+═══════════════════════════════════════════════════════════
+
+# Eliminar archivo del proyecto y de Git:
+git rm archivo.py
+
+# Eliminar de Git pero mantener en disco:
+git rm --cached archivo.py
+
+# Eliminar carpeta de Git pero mantener en disco:
+git rm --cached -r carpeta/
+
+
+═══════════════════════════════════════════════════════════
+🔄 ACTUALIZAR Y SINCRONIZAR
+═══════════════════════════════════════════════════════════
+
+git pull                       # Bajar cambios de GitHub
+git push                       # Subir cambios a GitHub
+git push -u origin main        # Primera vez subiendo rama
+git fetch                      # Descargar info sin fusionar
+
+
+═══════════════════════════════════════════════════════════
+⚠️  RESOLVER CONFLICTOS
+═══════════════════════════════════════════════════════════
+
+1. Si hay conflicto al hacer pull:
+   - Git marcará los archivos conflictivos
+   - Abre el archivo y verás marcas como:
+     <<<<<<< HEAD
+     tu código
+     =======
+     código del compañero
+     >>>>>>> rama
+
+2. Edita el archivo manualmente y elige qué código mantener
+
+3. Guarda el archivo
+
+4. Marca como resuelto:
+   git add archivo.py
+   git commit -m "Resuelto conflicto en archivo.py"
+   git push
+
+
+═══════════════════════════════════════════════════════════
+📝 BUENAS PRÁCTICAS
+═══════════════════════════════════════════════════════════
+
+✅ Haz pull ANTES de empezar a trabajar
+✅ Haz commits frecuentes con mensajes claros
+✅ Usa mensajes descriptivos: "Agregado login" en vez de "cambios"
+✅ Haz push al terminar tu sesión de trabajo
+✅ Nunca hagas commit de: venv/, __pycache__/, .env
+✅ Revisa git status antes de hacer commit
+✅ Comunícate con tu equipo sobre cambios importantes
+
+
+═══════════════════════════════════════════════════════════
+🆘 AYUDA RÁPIDA
+═══════════════════════════════════════════════════════════
+
+git help                       # Ayuda general
+git help comando               # Ayuda de comando específico
+git comando --help             # Ayuda detallada
+
+
+═══════════════════════════════════════════════════════════
+🔗 RECURSOS ÚTILES
+═══════════════════════════════════════════════════════════
+
+GitHub: https://github.com
+Git Documentation: https://git-scm.com/doc
+Visualizador Git: https://git-school.github.io/visualizing-git/
