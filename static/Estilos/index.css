@@ -1,0 +1,57 @@
+ /* Tipografía base */
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Colores de marca (para referencia, usados con Tailwind)
+        .color1 { color: #ff8724; }
+        .color2 { color: #ffa03d; }
+        .color3 { color: #ffb956; }
+        .color4 { color: #ffd26e; }
+        .color5 { color: #ffeb87; }
+        */
+
+        /* Animación de aparición para el scroll */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Animación sutil de carga */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-down {
+            animation: fadeInDown 0.6s ease-out forwards;
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }

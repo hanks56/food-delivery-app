@@ -3,83 +3,274 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APIfood</title>
-    <script src="../static/JS/login.js"></script>
-    <link rel="stylesheet" href="../static/Estilos/Loging.css">
-    <link rel="icon" href="../static/Imagenes/faviconLogoApifood.png" type="image/x-icon">
-
+    <title>MRFAT - Tu Delivery de Comida Favorita</title>
+    
+    <!-- Tailwind CSS CDN --><script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter) --><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="../static/JS/index.js"></script>
+    <link rel="stylesheet" href="../static/Estilos/index.css">
 </head>
 <body>
-     <div class="container">
-        <!-- Sección Izquierda con imagen de fondo -->
-        <div class="left-section">
-            <div class="left-content">
-                <div class="logo">
-                    <img src="../static/Imagenes/" alt="">
-                </div>
-                <h1 id="title-login">Registrate ahora y obten descuentos en <span class="highlight">APIfood</span></h1>
-                <p>Las mejores comidas que podas provar</p>
-            </div>
-        </div>
+    <body class="bg-white text-zinc-800">
 
-        <!-- Sección Derecha - Login -->
-        <div class="right-section">
-            <div class="login-container">
-                <div class="login-header">
-                    <h1>¡Bienvenido¡</h1>
-                    <p>Registrate </p>
+    <!-- ===== Header ===== --><header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm fade-in-down">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo --><a href="#" class="text-3xl font-extrabold text-[#ff8724]">
+                MRFAT
+            </a>
+            
+            <!-- Botones de Navegación --><div class="flex items-center space-x-3 sm:space-x-4">
+                <a href="#" class="text-zinc-700 font-medium hover:text-[#ff8724] transition-colors duration-300 px-3 sm:px-4 py-2">
+                    Iniciar sesión
+                </a>
+                <a href="#" class="bg-[#ff8724] hover:bg-[#ffa03d] text-white font-bold px-5 sm:px-6 py-2.5 rounded-full shadow-md transition-all duration-300 transform hover:scale-105">
+                    Registrarse
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ===== Main (Hero Section) ===== --><main class="pt-24 sm:pt-28">
+        <section class="container mx-auto px-6 py-16 md:py-24">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Columna de Texto --><div class="flex flex-col space-y-7 text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-zinc-900 leading-tight fade-in-up" style="animation-delay: 0.1s;">
+                        Tu comida favorita,
+                        <span class="text-[#ff8724]">más cerca</span> que nunca.
+                    </h1>
+                    
+                    <p class="text-lg text-zinc-600 max-w-lg mx-auto md:mx-0 fade-in-up" style="animation-delay: 0.2s;">
+                        Descubre, pide y disfruta de los mejores restaurantes de tu ciudad en minutos. MRFAT te lo lleva.
+                    </p>
+                    
+                    <!-- Mensaje de Descuento --><div class="bg-gradient-to-r from-[#fffbeb] to-[#fff2e0] border-l-4 border-[#ffb956] p-4 rounded-r-lg shadow-sm fade-in-up" style="animation-delay: 0.3s;">
+                        <p class="text-lg font-semibold text-zinc-800">
+                            ¡Regístrate y obtén un <span class="text-[#ff8724] font-bold">10% DE DESCUENTO</span> en tu primer pedido!
+                        </p>
+                    </div>
+                    
+                    <!-- Botón CTA Principal --><div class="pt-4 fade-in-up" style="animation-delay: 0.4s;">
+                        <a href="#" class="w-full sm:w-auto inline-block text-center bg-gradient-to-r from-[#ff8724] to-[#ffa03d] text-white text-xl font-bold px-10 py-4 rounded-full shadow-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl">
+                            Registrarse ahora
+                        </a>
+                    </div>
                 </div>
                 
-                <form class="login-form" id="loginForm">
-                    <div class="form-group">
-                        <label for="email">Correo Electrónico</label>
-                        <input type="email" id="email" name="email" placeholder="JuanPerez@email.com" required>
+                <!-- Columna de Imagen (Mockup) --><div class="flex items-center justify-center fade-in-up" style="animation-delay: 0.2s;">
+                    <!-- Placeholder para Mockup de App --><div class="relative w-80 h-[560px] bg-zinc-800 rounded-[40px] border-8 border-zinc-900 shadow-2xl transform md:rotate-3 md:hover:rotate-0 transition-transform duration-500">
+                        <!-- 'Notch' / Isla --><div class="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-5 bg-zinc-900 rounded-b-lg z-10"></div>
+                        
+                        <!-- Pantalla --><div class="w-full h-full bg-gradient-to-b from-[#ffeb87] to-[#ffd26e] rounded-[32px] flex flex-col items-center justify-center p-6 text-zinc-800 space-y-4">
+                            <!-- Logo App --><div class="w-24 h-24 bg-white/50 rounded-3xl flex items-center justify-center backdrop-blur-sm shadow-lg">
+                                <span class="text-4xl font-extrabold text-[#ff8724]">M</span>
+                            </div>
+                            <h2 class="text-2xl font-bold">MRFAT</h2>
+                            <p class="text-center font-medium">El sabor que buscas, a un toque de distancia.</p>
+                            <div class="w-full h-12 bg-white/50 rounded-full shadow-md mt-6"></div>
+                            <div class="w-full h-16 bg-white/50 rounded-xl shadow-md"></div>
+                            <div class="w-full h-16 bg-white/50 rounded-xl shadow-md"></div>
+                        </div>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="password">Contraseña</label>
-                        <input type="password" id="password" name="password" placeholder="••••••••" required>
-                    </div>
-                    
-                    <div class="form-options">
-                        <label class="remember-me">
-                            <input type="checkbox" id="remember">
-                            <span>Recordarme</span>
-                        </label>
-                        <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
-                    </div>
-                    
-                    <button type="submit" class="login-button">Iniciar Sesión</button>
-                    
-                    <div class="divider">
-                        <span>O continúa con</span>
-                    </div>
-                    
-                    <div class="social-login">
-                        <button type="button" class="social-button">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-                            </svg>
-                            Google
-                        </button>
-                        <button type="button" class="social-button">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#1877F2">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                            Facebook
-                        </button>
-                    </div>
-                    
-                    <div class="signup-link">
-                        ¿No tienes una cuenta? <a href="#">Regístrate aquí</a>
-                    </div>
-                </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Sección "Nuestros Platos Favoritos" ===== --><section class="py-20 bg-zinc-50 overflow-x-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-zinc-900 mb-16 reveal">
+                Explora Nuestros <span class="text-[#ff8724]">Platos Favoritos</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Categoría 1: Hamburguesas --><div class="flex flex-col items-center text-center bg-white rounded-2xl shadow-lg p-6 reveal">
+                    <img src="/static/img/food.png" alt="Ilustración de Hamburguesa" class="w-50 h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Comida</h3>
+                    <p class="text-zinc-600">Desde clásicas hasta las más atrevidas, encuentra tu hamburguesa perfecta.</p>
+                </div>
+
+                <!-- Categoría 2: Sushi --><div class="flex flex-col items-center text-center bg-white rounded-2xl shadow-lg p-6 reveal" style="transition-delay: 0.1s;">
+                    <img src="/static/img/licor.png" alt="Ilustración de Sushi" class="w-50 h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Licor</h3>
+                    <p class="text-zinc-600">Rolls frescos y nigiris exquisitos listos para tu paladar.</p>
+                </div>
+
+                <!-- Categoría 3: Pizzas --><div class="flex flex-col items-center text-center bg-white rounded-2xl shadow-lg p-6 reveal" style="transition-delay: 0.2s;">
+                    <img src="/static/img/medicina.png" alt="Ilustración de Pizza" class="w-50 h-48 object-cover rounded-xl mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Medicina</h3>
+                    <p class="text-zinc-600">Crujientes, con los mejores ingredientes y el sabor de Italia en tu casa.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12 reveal">
+                <a href="#" class="inline-block text-center bg-[#ff8724] hover:bg-[#ffa03d] text-white text-lg font-bold px-8 py-3 rounded-full shadow-md transition-all duration-300 transform hover:scale-105">
+                    Ver todos los platos
+                </a>
             </div>
         </div>
-    </div>
-    </div>
+    </section>
+
+    <!-- ===== Sección Informativa (Cómo Funciona) - Actualizada ===== --><section class="py-20 bg-white overflow-x-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-zinc-900 mb-16 reveal">
+                La <span class="text-[#ff8724]">Experiencia MRFAT</span> en 3 Pasos
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <!-- Paso 1 -->
+                <div class="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-lg reveal">
+                    <!-- Icono Placeholder -->
+                    <div class="w-20 h-20 bg-[#fff2e0] rounded-full flex items-center justify-center mb-5 ring-8 ring-[#fffbeb]">
+                        <!-- Icono de Búsqueda (Heroicons) -->
+                        <svg class="w-10 h-10 text-[#ff8724]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">1. Descubre</h3>
+                    <p class="text-zinc-600 leading-relaxed">Explora cientos de restaurantes y platos exclusivos cerca de ti. Usa filtros para encontrar justo lo que se te antoja.</p>
+                </div>
+                
+                <!-- Paso 2 -->
+                <div class="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-lg reveal" style="transition-delay: 0.1s;">
+                    <!-- Icono Placeholder -->
+                    <div class="w-20 h-20 bg-[#fff2e0] rounded-full flex items-center justify-center mb-5 ring-8 ring-[#fffbeb]">
+                        <!-- Icono de Carrito (Heroicons) -->
+                        <svg class="w-10 h-10 text-[#ff8724]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">2. Pide</h3>
+                    <p class="text-zinc-600 leading-relaxed">Añade tus platos al carrito y paga de forma segura con tu método de pago preferido. ¡No olvides tu descuento!</p>
+                </div>
+                
+                <!-- Paso 3 -->
+                <div class="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-lg reveal" style="transition-delay: 0.2s;">
+                    <!-- Icono Placeholder -->
+                    <div class="w-20 h-20 bg-[#fff2e0] rounded-full flex items-center justify-center mb-5 ring-8 ring-[#fffbeb]">
+                        <!-- Icono de Delivery (Heroicons) -->
+                        <svg class="w-10 h-10 text-[#ff8724]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15" />
+                        </svg>
+                        <!-- Usé un icono de "hamburguesa" como marcador de comida rápida -->
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-3">3. Disfruta</h3>
+                    <p class="text-zinc-600 leading-relaxed">Sigue tu pedido en tiempo real y recíbelo caliente en la puerta de tu casa. ¡Buen provecho!</p>
+                </div>
+                
+            </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Sección de Testimonios ===== --><section class="py-20 bg-zinc-100 overflow-x-hidden">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-zinc-900 mb-16 reveal">
+                Nuestros Clientes <span class="text-[#ff8724]">Nos Aman</span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- Testimonio 1 --><div class="bg-white p-8 rounded-2xl shadow-lg reveal">
+                    <div class="flex items-center mb-4">
+                        <img src="https://img.buzzfeed.com/buzzfeed-static/static/2023-01/24/21/asset/e470a0b884c3/sub-buzz-2985-1674594967-6.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto" alt="Foto de perfil de María G." class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold text-lg">María G.</p>
+                            <p class="text-sm text-zinc-500">Amante de la buena comida</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-700 italic">"MRFAT ha cambiado la forma en que pido comida. La app es súper fácil de usar y siempre encuentro lo que quiero. ¡El descuento de bienvenida fue la cereza del pastel!"</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <!-- Estrellas --><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                </div>
+                
+                <!-- Testimonio 2 --><div class="bg-white p-8 rounded-2xl shadow-lg reveal" style="transition-delay: 0.1s;">
+                    <div class="flex items-center mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpE_9XMRE_xEe4EkE1vdzClS6Ukh6THzJcOQ&s" alt="Foto de perfil de Juan P." class="w-16 h-16 rounded-full mr-4 object-cover">
+                        <div>
+                            <p class="font-bold text-lg">Juan P.</p>
+                            <p class="text-sm text-zinc-500">Gamer y foodie</p>
+                        </div>
+                    </div>
+                    <p class="text-zinc-700 italic">"Siempre pido con MRFAT cuando estoy en plena partida. La entrega es rápida y la comida siempre llega caliente. ¡Muy recomendable para cualquier antojo!"</p>
+                    <div class="flex text-yellow-400 mt-4">
+                        <!-- Estrellas --><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- ===== Footer ===== --><footer class="bg-zinc-900 text-zinc-400 py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                
+                <!-- Col 1: Logo y Copyright --><div class="md:col-span-1">
+                    <a href="#" class="text-3xl font-extrabold text-white mb-4 block">
+                        MRFAT
+                    </a>
+                    <p class="text-sm mb-5">© 2025 MRFAT Inc.<br>Todos los derechos reservados.</p>
+                    <!-- Redes Sociales --><div class="flex space-x-4">
+                        <a href="#" class="hover:text-white transition-colors" aria-label="Facebook">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.35C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"></path></svg>
+                        </a>
+                        <a href="#" class="hover:text-white transition-colors" aria-label="Instagram">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.148 3.227-1.669 4.771-4.919 4.919-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.07-1.646-.07-4.85s.012-3.584.07-4.85c.148-3.227 1.669-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.626c-3.141 0-3.499.011-4.717.069-2.693.123-3.878 1.318-4.003 4.003-.058 1.218-.069 1.575-.069 4.717s.011 3.499.069 4.717c.125 2.684 1.31 3.878 4.003 4.003 1.218.058 1.575.069 4.717.069s3.499-.011 4.717-.069c2.684-.125 3.878-1.31 4.003-4.003.058-1.218.069-1.575.069-4.717s-.011-3.499-.069-4.717c-.125-2.684-1.31-3.878-4.003-4.003C15.499 3.8 15.141 3.79 12 3.79zm0 2.882c-2.649 0-4.8 2.151-4.8 4.8s2.151 4.8 4.8 4.8 4.8-2.151 4.8-4.8-2.151-4.8-4.8-4.8zm0 7.933c-1.728 0-3.133-1.405-3.133-3.133s1.405-3.133 3.133-3.133 3.133 1.405 3.133 3.133-1.405 3.133-3.133 3.133zm4.908-7.75c-.608 0-1.1.492-1.1 1.1s.492 1.1 1.1 1.1 1.1-.492 1.1-1.1-.492-1.1-1.1-1.1z"></path></svg>
+                        </a>
+                        <a href="#" class="hover:text-white transition-colors" aria-label="Twitter">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Col 2: Enlaces Compañía --><div>
+                    <h4 class="font-semibold text-white mb-4 text-lg">Compañía</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white transition-colors">Sobre Nosotros</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contacto</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Trabaja con Nosotros</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Col 3: Enlaces Legal --><div>
+                    <h4 class="font-semibold text-white mb-4 text-lg">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white transition-colors">Términos y Condiciones</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Política de Privacidad</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Política de Cookies</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Enlaces Descarga --><div>
+                    <h4 class="font-semibold text-white mb-4 text-lg">Descarga la App</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="hover:text-white transition-colors">App Store</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Google Play</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>

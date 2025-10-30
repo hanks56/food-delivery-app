@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi sitio{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>Encabezado común</h1>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Contenido por defecto si la hija no lo sobrescribe -->
+        <p>Bienvenido a mi sitio con Flask.</p>
+        <ul>
+            <li>Primer punto</li>
+            <li>Segundo punto</li>
+            <li>Tercer punto</li>
+
+        </ul>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>© 2025 - Mi sitio</p>
+    </footer>
+</body>
+</html>
